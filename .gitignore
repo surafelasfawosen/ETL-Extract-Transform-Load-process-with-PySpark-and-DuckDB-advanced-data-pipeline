@@ -1,0 +1,5 @@
+@"
+pyspark-env/
+.ipynb_checkpoints/
+*.duckdb
+"@ | Out-File -Encoding UTF8 .gitignore
