@@ -5,31 +5,55 @@
 This project implements an advanced ETL (Extract, Transform, Load) data pipeline specifically designed for fraud detection analysis. The pipeline leverages **PySpark** for distributed data processing and **DuckDB** for high-performance analytics, creating a robust solution for handling large-scale financial transaction data.
 
 
-# ETL Architecture
+# 🏦 Fraud Detection & Currency Analysis Pipeline
+
+This repository implements a high-performance ETL pipeline for processing financial transactions, enriching data with fraud labels and currency exchange rates, and serving it for interactive analytics.
+
+## 🏗️ System Architecture
 
 ```mermaid
-flowchart TD
-    A[Data Sources] --> B[Apache PySpark]
-    B --> C[DuckDB]
-
-    subgraph A [Data Sources]
-        A1["Ookla Speedtest (Parquet)"]
-        A2["World Population (CSV)"]
-        A3["Country Boundaries (GeoJSON)"]
+graph TD
+    %% Data Sources Layer
+    subgraph Data_Sources [Data Sources]
+        direction TB
+        S1[HI-Small_Trans.csv]
+        S2[fraud_detection.parquet]
+        S3[currency.json]
     end
 
-    subgraph B [Apache PySpark]
-        B1["Distributed Processing"]
-        B2["Data Cleaning"]
-        B3["Standardization"]
-        B4["Enrichment & Joins"]
-        B5["Feature Engineering"]
+    %% Processing Layer
+    subgraph Processing [Apache PySpark]
+        direction TB
+        P1[Distributed Processing]
+        P2[Data Cleaning & Standardization]
+        P3[Currency Normalization & Joins]
+        P4[Feature Engineering]
     end
 
-    subgraph C [DuckDB]
-        C1["Analytical Warehouse"]
+    %% Warehouse Layer
+    subgraph Warehouse [DuckDB]
+        direction TB
+        W1[Analytical Data Warehouse]
+        W2[High-Performance OLAP]
     end
 
+    %% Visualization Layer
+    subgraph Visualization [Power BI]
+        direction TB
+        V1[Interactive Fraud Dashboard]
+        V2[Currency Trend Analysis]
+    end
+
+    %% Relationships
+    Data_Sources --> Processing
+    Processing --> Warehouse
+    Warehouse --> Visualization
+
+    %% Styling
+    style Data_Sources fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Processing fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
+    style Warehouse fill:#8e44ad,stroke:#71368a,stroke-width:2px,color:#fff
+    style Visualization fill:#27ae60,stroke:#1e8449,stroke-width:2px,color:#fff
 
 
 ## Key Features
