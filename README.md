@@ -179,6 +179,6 @@ Planned improvements:
 - Machine learning model integration
 - Advanced visualization dashboard
 - Cloud deployment options
-- Additional data source connectors
+- Additional data source connectors.
 
 ---
