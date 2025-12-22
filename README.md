@@ -5,31 +5,31 @@
 This project implements an advanced ETL (Extract, Transform, Load) data pipeline specifically designed for fraud detection analysis. The pipeline leverages **PySpark** for distributed data processing and **DuckDB** for high-performance analytics, creating a robust solution for handling large-scale financial transaction data.
 
 
-┌───────────────────────────────┐
-│ Data Sources │
-│ │
-│ • Ookla Speedtest (Parquet) │
-│ • World Population (CSV) │
-│ • Country Boundaries (GeoJSON)│
-└───────────────┬───────────────┘
-│
-▼
-┌───────────────────────────────┐
-│ Apache PySpark │
-│ │
-│ • Distributed Processing │
-│ • Data Cleaning │
-│ • Standardization │
-│ • Enrichment & Joins │
-│ • Feature Engineering │
-└───────────────┬───────────────┘
-│
-▼
-┌───────────────────────────────┐
-│ DuckDB │
-│ │
-│ • Analytical Warehouse │
-└───────────────────────────────┘
+# ETL Architecture
+
+```mermaid
+flowchart TD
+    A[Data Sources] --> B[Apache PySpark]
+    B --> C[DuckDB]
+
+    subgraph A [Data Sources]
+        A1["Ookla Speedtest (Parquet)"]
+        A2["World Population (CSV)"]
+        A3["Country Boundaries (GeoJSON)"]
+    end
+
+    subgraph B [Apache PySpark]
+        B1["Distributed Processing"]
+        B2["Data Cleaning"]
+        B3["Standardization"]
+        B4["Enrichment & Joins"]
+        B5["Feature Engineering"]
+    end
+
+    subgraph C [DuckDB]
+        C1["Analytical Warehouse"]
+    end
+
 
 
 ## Key Features
