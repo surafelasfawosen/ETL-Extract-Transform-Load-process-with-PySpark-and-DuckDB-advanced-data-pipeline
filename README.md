@@ -124,18 +124,18 @@ results = conn.execute("SELECT * FROM fraud_transactions LIMIT 10").fetchall()
 - **Normalization**: Standardize data formats and scales
 
 ### 3. **Load Phase**
-- Store processed data in DuckDB for analytics
-- Create optimized tables for query performance
-- Implement data partitioning and indexing
+- Store cleaned and transformed data in DuckDB to enable fast, lightweight analytical queries without requiring an external database.
+- Design optimized table schemas with appropriate data types and structure to improve query efficiency and reduce storage overhead.
+- Use partitioning and indexing on frequently queried fields to minimize data scans and accelerate analytical performance.
 
 ##  Analytics Capabilities
 
-The pipeline enables:
-- Real-time fraud detection scoring
-- Historical trend analysis
-- Customer behavior profiling
-- Transaction pattern recognition
-- Currency conversion analytics
+The pipeline:
+- Enable real-time fraud detection scoring to identify and flag suspicious transactions as they occur.
+- Support historical trend analysis to uncover long-term patterns, anomalies, and performance insights.
+- Provide customer behavior profiling to better understand user activity, preferences, and spending habits.
+- Perform transaction pattern recognition to detect recurring behaviors and irregular transaction flows.
+- Deliver currency conversion analytics to analyze cross-border transactions and compare financial metrics across multiple currencies.
 
 ##  Testing & Validation
 
