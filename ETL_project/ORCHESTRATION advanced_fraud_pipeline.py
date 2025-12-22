@@ -7,13 +7,7 @@ from datetime import timedelta
 import duckdb
 import os
 
-@task(
-    retries=3,                  # Auto-retry on failure
-    retry_delay_seconds=10,     # Exponential backoff
-    timeout_seconds=600,        # Increased for large files
-    cache_key_fn=lambda _, params: params.get("file_path"),  # Cache by file path
-    cache_expiration=timedelta(days=1),                     # Daily refresh
-)
+
 def load_data(source: str, file_path: str):
     logger = get_run_logger()
     spark = SparkSession.builder.appName("FraudLoad").getOrCreate()
