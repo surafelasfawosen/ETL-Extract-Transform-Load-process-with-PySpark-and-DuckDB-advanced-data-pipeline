@@ -4,6 +4,54 @@
 
 This project implements an advanced ETL (Extract, Transform, Load) data pipeline specifically designed for fraud detection analysis. The pipeline leverages **PySpark** for distributed data processing and **DuckDB** for high-performance analytics, creating a robust solution for handling large-scale financial transaction data.
 
+# ETL Workflow: Currency & Transaction Data
+
+```mermaid
+flowchart TD
+    A[Data Sources] --> B[Data Ingestion Layer]
+    B --> C[Transformation Layer]
+    C --> D[Validation Layer]
+    D --> E[Storage Layer: DuckDB]
+    E --> F[Analytics / BI Layer]
+
+    subgraph A [Data Sources]
+        A1["currency.json\n(Fraud Detection – JSON)"]
+        A2["HI-Small_Trans.parquet\n(Transaction Data – Parquet)"]
+    end
+
+    subgraph B [Data Ingestion Layer (Apache PySpark)]
+        B1["Read JSON & Parquet files"]
+        B2["Distributed batch ingestion"]
+    end
+
+    subgraph C [Transformation Layer (Apache PySpark)]
+        C1["Data cleaning"]
+        C2["Schema normalization"]
+        C3["Missing value handling"]
+        C4["Feature engineering"]
+        C5["Dataset joining & enrichment"]
+    end
+
+    subgraph D [Validation Layer]
+        D1["Schema validation"]
+        D2["Duplicate & null checks"]
+        D3["Data consistency checks"]
+    end
+
+    subgraph E [Storage Layer: DuckDB]
+        E1["fraud_detection_currency"]
+        E2["fraud_detection_transactions"]
+        E3["Analytical SQL engine"]
+    end
+
+    subgraph F [Analytics / BI Layer]
+        F1["SQL Analytics"]
+        F2["Dashboards & Reports"]
+        F3["Fraud pattern analysis"]
+    end
+
+
+
 ## Key Features
 
 - **Automated ETL Pipeline**: Orchestrated workflow for data extraction, transformation, and loading
