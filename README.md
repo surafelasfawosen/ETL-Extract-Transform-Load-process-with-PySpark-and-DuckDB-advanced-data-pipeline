@@ -9,52 +9,44 @@ This project implements an advanced ETL (Extract, Transform, Load) data pipeline
 
 This repository implements a high-performance ETL pipeline for processing financial transactions, enriching data with fraud labels and currency exchange rates, and serving it for interactive analytics.
 
+# ETL Pipeline: Fraud Detection & Currency Analysis
+
+This repository contains the architecture and code for a high-performance ETL pipeline processing financial data.
+
 ## 🏗️ System Architecture
 
 ```mermaid
 graph TD
-    %% Data Sources Layer
-    subgraph Data_Sources [Data Sources]
-        direction TB
-        S1[HI-Small_Trans.csv]
-        S2[fraud_detection.parquet]
-        S3[currency.json]
+    %% 1. Data Sources
+    subgraph Layer1 [Data Sources]
+        S1["• HI-Small_Trans (CSV)<br/>• fraud_detection (Parquet)<br/>• currency (JSON)"]
     end
 
-    %% Processing Layer
-    subgraph Processing [Apache PySpark]
-        direction TB
-        P1[Distributed Processing]
-        P2[Data Cleaning & Standardization]
-        P3[Currency Normalization & Joins]
-        P4[Feature Engineering]
+    %% 2. Processing Layer
+    subgraph Layer2 [Apache PySpark]
+        P1["• Distributed Processing<br/>• Data Cleaning<br/>• Standardization<br/>• Enrichment & Joins<br/>• Feature Engineering"]
     end
 
-    %% Warehouse Layer
-    subgraph Warehouse [DuckDB]
-        direction TB
-        W1[Analytical Data Warehouse]
-        W2[High-Performance OLAP]
+    %% 3. Warehouse Layer
+    subgraph Layer3 [DuckDB]
+        W1["• Analytical Warehouse"]
     end
 
-    %% Visualization Layer
-    subgraph Visualization [Power BI]
-        direction TB
-        V1[Interactive Fraud Dashboard]
-        V2[Currency Trend Analysis]
+    %% 4. Visualization Layer
+    subgraph Layer4 [Power BI]
+        V1["• Interactive Dashboard"]
     end
 
-    %% Relationships
-    Data_Sources --> Processing
-    Processing --> Warehouse
-    Warehouse --> Visualization
+    %% Connections
+    Layer1 --> Layer2
+    Layer2 --> Layer3
+    Layer3 --> Layer4
 
-    %% Styling
-    style Data_Sources fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style Processing fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
-    style Warehouse fill:#8e44ad,stroke:#71368a,stroke-width:2px,color:#fff
-    style Visualization fill:#27ae60,stroke:#1e8449,stroke-width:2px,color:#fff
-
+    %% Styling to match your image
+    style Layer1 fill:#337ab7,stroke:#2e6da4,color:#fff
+    style Layer2 fill:#e67e22,stroke:#d35400,color:#fff
+    style Layer3 fill:#8e44ad,stroke:#71368a,color:#fff
+    style Layer4 fill:#27ae60,stroke:#1e8449,color:#fff
 
 ## Key Features
 
