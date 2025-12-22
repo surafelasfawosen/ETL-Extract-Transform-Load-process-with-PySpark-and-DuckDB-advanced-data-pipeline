@@ -1,10 +1,10 @@
 # Advanced ETL Pipeline with PySpark and DuckDB for Fraud Detection
 
-## 📋 Project Overview
+##  Project Overview
 
 This project implements an advanced ETL (Extract, Transform, Load) data pipeline specifically designed for fraud detection analysis. The pipeline leverages **PySpark** for distributed data processing and **DuckDB** for high-performance analytics, creating a robust solution for handling large-scale financial transaction data.
 
-## 🎯 Key Features
+## Key Features
 
 - **Automated ETL Pipeline**: Orchestrated workflow for data extraction, transformation, and loading
 - **Fraud Detection Focus**: Specialized processing for identifying fraudulent transactions
@@ -13,7 +13,7 @@ This project implements an advanced ETL (Extract, Transform, Load) data pipeline
 - **Data Validation**: Comprehensive data quality checks and validation steps
 - **Modular Architecture**: Clean separation of concerns for maintainability
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 ETL-Extract-Transform-Load-process-with-PySpark-and-DuckDB-advanced-data-pipeline/
@@ -37,7 +37,7 @@ ETL-Extract-Transform-Load-process-with-PySpark-and-DuckDB-advanced-data-pipelin
 └── README.md
 ```
 
-## 📊 Data Sources
+##  Data Sources
 
 1. **HI-Small_Trans.csv** - Main transactional dataset containing:
    - Customer transaction records
@@ -55,7 +55,7 @@ ETL-Extract-Transform-Load-process-with-PySpark-and-DuckDB-advanced-data-pipelin
    - Anomaly detection features
    - Historical fraud patterns
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Python 3.8+
@@ -80,7 +80,7 @@ pip install -r requirements.txt
 export JAVA_HOME=/path/to/java
 ```
 
-## ⚙️ Usage
+##  Usage
 
 ### Running the ETL Pipeline
 ```python
@@ -110,7 +110,7 @@ conn = duckdb.connect('analytics.duckdb')
 results = conn.execute("SELECT * FROM fraud_transactions LIMIT 10").fetchall()
 ```
 
-## 🔧 Pipeline Components
+##  Pipeline Components
 
 ### 1. **Extract Phase**
 - Load CSV and JSON data from multiple sources
@@ -128,7 +128,7 @@ results = conn.execute("SELECT * FROM fraud_transactions LIMIT 10").fetchall()
 - Create optimized tables for query performance
 - Implement data partitioning and indexing
 
-## 📈 Analytics Capabilities
+##  Analytics Capabilities
 
 The pipeline enables:
 - Real-time fraud detection scoring
@@ -137,7 +137,7 @@ The pipeline enables:
 - Transaction pattern recognition
 - Currency conversion analytics
 
-## 🧪 Testing & Validation
+##  Testing & Validation
 
 The pipeline includes:
 - Data quality checks at each stage
@@ -146,14 +146,14 @@ The pipeline includes:
 - Performance monitoring
 - Error handling and logging
 
-## 📊 Performance Optimizations
+##  Performance Optimizations
 
 - **PySpark optimizations**: Partitioning, caching, and broadcast joins
 - **DuckDB features**: Vectorized execution and columnar storage
 - **Memory management**: Efficient data serialization
 - **Parallel processing**: Multi-core utilization
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -161,18 +161,18 @@ The pipeline includes:
 4. Push to the branch
 5. Create a Pull Request
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Support
+##  Support
 
 For issues, questions, or contributions:
 1. Check the existing issues
 2. Create a new issue with detailed description
 3. Provide sample data if applicable
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 Planned improvements:
 - Real-time streaming capabilities
