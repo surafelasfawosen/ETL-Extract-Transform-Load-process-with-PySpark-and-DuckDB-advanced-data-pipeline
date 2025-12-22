@@ -47,8 +47,6 @@ ETL-Extract-Transform-Load-process-with-PySpark-and-DuckDB-advanced-data-pipelin
 
 2. **currency.json** - Reference data for:
    - Currency codes and conversions
-   - Exchange rates
-   - Currency metadata
 
 3. **fraud_detection.parquet** - Pre-processed data for:
    - Fraud labels and indicators
