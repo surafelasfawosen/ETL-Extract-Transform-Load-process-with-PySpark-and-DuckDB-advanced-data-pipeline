@@ -1,5 +1,22 @@
-@"
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
 pyspark-env/
+
+# Spark / logs
+*.log
+
+# Jupyter
 .ipynb_checkpoints/
-*.duckdb
-"@ | Out-File -Encoding UTF8 .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prefect
+.prefect/
+
+# DuckDB temp
+*.duckdb.wal
