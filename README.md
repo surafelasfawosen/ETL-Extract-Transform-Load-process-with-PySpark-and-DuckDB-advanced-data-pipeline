@@ -13,40 +13,11 @@ This repository implements a high-performance ETL pipeline for processing financ
 
 This repository contains the architecture and code for a high-performance ETL pipeline processing financial data.
 
-## 🏗️ System Architecture
+# ETL Process: Fraud Detection & Currency Analysis Pipeline
 
-```mermaid
-graph TD
-    %% 1. Data Sources
-    subgraph Layer1 [Data Sources]
-        S1["• HI-Small_Trans (CSV)<br/>• fraud_detection (Parquet)<br/>• currency (JSON)"]
-    end
+An advanced data engineering pipeline that processes high-volume transaction data using **PySpark** for distributed computing and **DuckDB** for fast analytical storage.
 
-    %% 2. Processing Layer
-    subgraph Layer2 [Apache PySpark]
-        P1["• Distributed Processing<br/>• Data Cleaning<br/>• Standardization<br/>• Enrichment & Joins<br/>• Feature Engineering"]
-    end
-
-    %% 3. Warehouse Layer
-    subgraph Layer3 [DuckDB]
-        W1["• Analytical Warehouse"]
-    end
-
-    %% 4. Visualization Layer
-    subgraph Layer4 [Power BI]
-        V1["• Interactive Dashboard"]
-    end
-
-    %% Connections
-    Layer1 --> Layer2
-    Layer2 --> Layer3
-    Layer3 --> Layer4
-
-    %% Styling to match your image
-    style Layer1 fill:#337ab7,stroke:#2e6da4,color:#fff
-    style Layer2 fill:#e67e22,stroke:#d35400,color:#fff
-    style Layer3 fill:#8e44ad,stroke:#71368a,color:#fff
-    style Layer4 fill:#27ae60,stroke:#1e8449,color:#fff
+<img width="700" height="368" alt="image" src="https://github.com/user-attachments/assets/504b4318-f72c-49fb-ad5d-ba3bef170dcd" />
 
 ## Key Features
 
