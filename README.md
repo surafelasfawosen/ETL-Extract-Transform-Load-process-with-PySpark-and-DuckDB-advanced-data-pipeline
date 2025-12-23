@@ -161,6 +161,13 @@ The pipeline:
 - Perform transaction pattern recognition to detect recurring behaviors and irregular transaction flows.
 - Deliver currency conversion analytics to analyze cross-border transactions and compare financial metrics across multiple currencies.
 
+ ## AML Risk Analysis Dashboard
+
+This dashboard provides an interactive overview of anti-money laundering (AML) risk and transaction patterns derived from the processed transaction data. It summarizes key fraud indicators, including AML-flagged transactions, laundering volumes, time-based activity trends, payment method usage, transaction size distribution, and currency-level laundering behavior.
+
+The dashboard enables users to quickly identify high-risk periods, dominant payment formats, major laundering currencies, and high-value transaction exposure, supporting data-driven fraud monitoring and analytical decision-making.
+<img width="1326" height="745" alt="image" src="https://github.com/user-attachments/assets/44f3ab34-01e5-4e95-9ede-8ddc1f2f24d7" />
+
 ##  Testing & Validation
 
 The pipeline includes:
