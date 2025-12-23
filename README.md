@@ -99,10 +99,10 @@ export JAVA_HOME=/path/to/java
 | 1 | Surafel Asfawosen | DBU1501482 | Team Lead & Data Engineer |
 | 2 | Beimnet Yealemebhan | DBU1501024 | ETL Development |
 | 3 | Yonatan Kiross | DBU1501656 | Data Analysis |
-| 4 | Bethlehem Asrat | DBU1501062 | Data Validation & Testing |
+| 4 | Bethlehem Asrat | DBU1501062 | Data Validation |
 | 5 | Ephrata Yeshaeh | DBU1501631 | Documentation & Reporting |
 | 6 | Besufekad Ayalkbet | DBU1501050 | System Integration |
-| 7 | Nardos Molla | DBU1501397 | Research & Model Evaluation |
+| 7 | Nardos Molla | DBU1501397 | Data Collection |
 
 ##  Usage
 
